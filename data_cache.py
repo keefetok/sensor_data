@@ -1,0 +1,15 @@
+class DataCache:
+    def __init__(self):
+        self._cache = {}
+    
+    def get(self, key):
+        return self._cache.get(key)
+    
+    def set(self, key, value):
+        self._cache[key] = value
+    
+    def has(self, key):
+        return key in self._cache
+    
+    def clear(self):
+        self._cache.clear()
